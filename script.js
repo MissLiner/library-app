@@ -24,9 +24,9 @@ addBookToLibrary(book3);
 const libraryShelf = document.getElementById('library-shelf');
 let shelvedBooks = document.querySelectorAll('.shelved-books');
 
-clearShelf = () => {
-    for (i = libraryShelf.childNodes.length; i > 0; i--) {
-        libraryShelf.removeChild(document.querySelector('.shelved-books'));
+clearShelf = () => { 
+    while (libraryShelf.firstChild) {
+        libraryShelf.removeChild(libraryShelf.firstChild);
     }
 }
 
@@ -51,13 +51,11 @@ shelveBooks = () => {
         shelfBook.id = myLibrary.indexOf(item);
         shelfBook.textContent = item.describeBook();
         libraryShelf.appendChild(shelfBook);
-})
-addRemoveBtn();
+    })
+    addRemoveBtn();
 }
 
 shelveBooks(myLibrary);
-console.log(myLibrary);
-
 
 const newBookBtn = document.getElementById('new-book-btn');
 const newBookForm = document.getElementById('new-book-form');
@@ -84,4 +82,5 @@ submitBtn.addEventListener('click', () => {
 submitBtn.addEventListener('click', () => {
     newBookBtn.classList.remove('hidden');
     newBookForm.classList.add('hidden');
+    submitBtn.classList.add('hidden');
 })
