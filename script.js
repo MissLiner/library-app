@@ -37,10 +37,16 @@ addRemoveBtn = () => {
             let removeBtn = document.createElement('button');
             removeBtn.className = 'remove-btn';
             removeBtn.textContent = 'Remove';
+            removeBtn.addEventListener('click', function removeBook() {
+                myLibrary.splice(removeBtn.dataset.bookindex, 1);
+                removeBtn.parentNode.remove();
+            })
             document.getElementById(`${i}`).appendChild(removeBtn);
             removeBtn.dataset.bookindex = `${i}`;
     }
 }
+
+
 
 // (parent, index) => {
 //     let removeBtn = document.createElement('button');
@@ -76,6 +82,18 @@ newBookBtn.addEventListener('click', () => {
     newBookBtn.classList.add('hidden');
 })
 
+// const removeBtns = document.querySelectorAll('.remove-btn');
+
+// const removeBook = () => {
+//     removeBtns.forEach(button => {
+//     button.addEventListener('click', function removeBook() {
+//         myLibrary.splice(button.dataset.bookindex, 1);
+//         button.parentNode.remove();
+//         //document.getElementById(button.dataset.bookindex).remove();
+//     })
+// })
+// }
+
 submitBtn.addEventListener('click', () => {
     let newTitle = document.getElementById('title-input').value;
     let newAuthor = document.getElementById('author-input').value;
@@ -85,6 +103,7 @@ submitBtn.addEventListener('click', () => {
     addBookToLibrary(newBook);
     clearShelf();
     shelveBooks(myLibrary);
+    //removeBook();
     console.log(myLibrary);
 })
 
@@ -93,12 +112,4 @@ submitBtn.addEventListener('click', () => {
     newBookForm.classList.add('hidden');
 })
 
-
-
-document.querySelectorAll('.remove-btn').forEach(button => {
-    button.addEventListener('click', function removeBook() {
-        myLibrary.splice(button.dataset.bookindex, 1);
-        button.parentNode.remove();
-        //document.getElementById(button.dataset.bookindex).remove();
-    })
-})
+//removeBook();
