@@ -32,33 +32,38 @@ clearShelf = () => {
 
 
 //if (myLibrary.length > 0)
-addRemoveBtn = (parent) => {
-    let removeBtn = document.createElement('button');
-    removeBtn.className = 'remove-btn';
-    removeBtn.textContent = 'Remove';
-    parent.appendChild(removeBtn);
+addRemoveBtn = () => {
+     for (i = myLibrary.length-1; i >= 0; i--) {
+            let removeBtn = document.createElement('button');
+            removeBtn.className = 'remove-btn';
+            removeBtn.textContent = 'Remove';
+            document.getElementById(`${i}`).appendChild(removeBtn);
+            removeBtn.dataset.bookindex = `${i}`;
+    }
 }
-//     for (i = myLibrary.length-1; i >= 0; i--) {
-//         let removeBtn = document.createElement('button');
-//         removeBtn.className = 'remove-btn';
-//         removeBtn.textContent = 'Remove';
-//         document.getElementById(`${i}`).appendChild(removeBtn);
-//         removeBtn.dataset.bookindex = `${i}`;
+
+// (parent, index) => {
+//     let removeBtn = document.createElement('button');
+//     removeBtn.className = 'remove-btn';
+//     removeBtn.textContent = 'Remove';
+//     removeBtn.dataset.bookindex = index;
+//     parent.appendChild(removeBtn);
 // }
-// }
+
 
 shelveBooks = () => {
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
         shelfBook.className = 'shelved-books';
-        shelfBook.id = `${myLibrary.indexOf(item)}`;
+        shelfBook.id = myLibrary.indexOf(item);
         shelfBook.textContent = item.describeBook();
-        addRemoveBtn(shelfBook);
+        addRemoveBtn();
         libraryShelf.appendChild(shelfBook);
 })
 }
 
 shelveBooks(myLibrary);
+console.log(myLibrary);
 
 
 const newBookBtn = document.getElementById('new-book-btn');
@@ -80,6 +85,7 @@ submitBtn.addEventListener('click', () => {
     addBookToLibrary(newBook);
     clearShelf();
     shelveBooks(myLibrary);
+    console.log(myLibrary);
 })
 
 submitBtn.addEventListener('click', () => {
@@ -92,6 +98,7 @@ submitBtn.addEventListener('click', () => {
 document.querySelectorAll('.remove-btn').forEach(button => {
     button.addEventListener('click', function removeBook() {
         myLibrary.splice(button.dataset.bookindex, 1);
-        document.getElementById(button.dataset.bookindex).remove();
+        button.parentNode.remove();
+        //document.getElementById(button.dataset.bookindex).remove();
     })
 })
