@@ -30,6 +30,19 @@ clearShelf = () => {
     }
 }
 
+addStatusBtn = () => {
+    for (i = myLibrary.length-1; i >= 0; i--) {
+    let statusBtn = document.createElement('button');
+    statusBtn.className = 'status-btn';
+    document.getElementById(`${i}`).appendChild(statusBtn);
+    statusBtn.textContent = myLibrary[i].readStatus;
+    statusBtn.addEventListener('click', function toggleStatus() {
+        statusBtn.textContent === 'read' ? statusBtn.textContent = 'not read' : statusBtn.textContent = 'read';
+    })
+    myLibrary[i].readStatus = statusBtn.textContent;
+    }
+}
+
 addRemoveBtn = () => {
      for (i = myLibrary.length-1; i >= 0; i--) {
             let removeBtn = document.createElement('button');
@@ -52,6 +65,7 @@ shelveBooks = () => {
         shelfBook.textContent = item.describeBook();
         libraryShelf.appendChild(shelfBook);
     })
+    addStatusBtn();
     addRemoveBtn();
 }
 

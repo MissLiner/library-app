@@ -69,6 +69,11 @@ button {
     text-align: center;
 }
 
+.status-btn {
+    height:25px;
+    color: oldlace;
+}
+
 .remove-btn {
     font-size: smaller;
     text-align: start;
