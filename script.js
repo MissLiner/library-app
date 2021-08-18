@@ -30,32 +30,19 @@ clearShelf = () => {
     }
 }
 
-
-//if (myLibrary.length > 0)
 addRemoveBtn = () => {
      for (i = myLibrary.length-1; i >= 0; i--) {
             let removeBtn = document.createElement('button');
             removeBtn.className = 'remove-btn';
             removeBtn.textContent = 'Remove';
+            document.getElementById(`${i}`).appendChild(removeBtn);
+            removeBtn.dataset.bookindex = `${i}`;
             removeBtn.addEventListener('click', function removeBook() {
                 myLibrary.splice(removeBtn.dataset.bookindex, 1);
                 removeBtn.parentNode.remove();
             })
-            document.getElementById(`${i}`).appendChild(removeBtn);
-            removeBtn.dataset.bookindex = `${i}`;
     }
 }
-
-
-
-// (parent, index) => {
-//     let removeBtn = document.createElement('button');
-//     removeBtn.className = 'remove-btn';
-//     removeBtn.textContent = 'Remove';
-//     removeBtn.dataset.bookindex = index;
-//     parent.appendChild(removeBtn);
-// }
-
 
 shelveBooks = () => {
     myLibrary.forEach(item => {
@@ -65,12 +52,10 @@ shelveBooks = () => {
         shelfBook.textContent = item.describeBook();
         libraryShelf.appendChild(shelfBook);
 })
-addRemoveBtn();
 }
 
 shelveBooks(myLibrary);
 console.log(myLibrary);
-
 
 const newBookBtn = document.getElementById('new-book-btn');
 const newBookForm = document.getElementById('new-book-form');
@@ -82,18 +67,6 @@ newBookBtn.addEventListener('click', () => {
     newBookBtn.classList.add('hidden');
 })
 
-// const removeBtns = document.querySelectorAll('.remove-btn');
-
-// const removeBook = () => {
-//     removeBtns.forEach(button => {
-//     button.addEventListener('click', function removeBook() {
-//         myLibrary.splice(button.dataset.bookindex, 1);
-//         button.parentNode.remove();
-//         //document.getElementById(button.dataset.bookindex).remove();
-//     })
-// })
-// }
-
 submitBtn.addEventListener('click', () => {
     let newTitle = document.getElementById('title-input').value;
     let newAuthor = document.getElementById('author-input').value;
@@ -103,7 +76,6 @@ submitBtn.addEventListener('click', () => {
     addBookToLibrary(newBook);
     clearShelf();
     shelveBooks(myLibrary);
-    //removeBook();
     console.log(myLibrary);
 })
 
@@ -111,5 +83,3 @@ submitBtn.addEventListener('click', () => {
     newBookBtn.classList.remove('hidden');
     newBookForm.classList.add('hidden');
 })
-
-//removeBook();
