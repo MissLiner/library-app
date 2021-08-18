@@ -21,7 +21,11 @@ input {
     width: 100%;
     background-color: oldlace;
     border-radius: 6px;
-    padding: 10px;
+    color: saddlebrown;
+    font-family: sans-serif;
+    font-size: 16px;
+    height: 30px;
+
     margin: 10px;
 }
 
