@@ -8,7 +8,7 @@ function Book(title, author, pages, readStatus) {
   }
 
   Book.prototype.describeBook = function(book) {
-    return this.title + ' by ' + this.author + ', ' + this.length + ' pages, ' + this.readStatus;
+    return this.title + ' by ' + this.author + ', ' + this.length + ' pages.';
   }
 
 addBookToLibrary = (book) => myLibrary.push(book);
@@ -33,7 +33,7 @@ clearShelf = () => {
 addStatusBtn = () => {
     for (i = myLibrary.length-1; i >= 0; i--) {
     let statusBtn = document.createElement('button');
-    statusBtn.className = 'status-btn';
+    statusBtn.className = 'book-btn';
     document.getElementById(`${i}`).appendChild(statusBtn);
     statusBtn.dataset.bookindex = `${i}`;
     statusBtn.textContent = myLibrary[i].readStatus;
@@ -44,7 +44,7 @@ addStatusBtn = () => {
 addRemoveBtn = () => {
      for (i = myLibrary.length-1; i >= 0; i--) {
             let removeBtn = document.createElement('button');
-            removeBtn.className = 'remove-btn';
+            removeBtn.className = 'book-btn';
             removeBtn.textContent = 'Remove';
             document.getElementById(`${i}`).appendChild(removeBtn);
             removeBtn.dataset.bookindex = `${i}`;
