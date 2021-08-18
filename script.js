@@ -41,9 +41,11 @@ for (i = myLibrary.length-1; i >= 0; i--) {
     removeBtn.dataset.bookindex = `${i}`;
 }
 
-document.querySelectorAll('#remove-btn').forEach(button => {
-    removeBtn.addEventListener('click', () => {
+document.querySelectorAll('.remove-btn').forEach(button => {
+    button.addEventListener('click', function removeBook() {
         myLibrary.splice(button.dataset.bookindex, 1);
+        document.getElementById(button.dataset.bookindex).remove();
+        console.log('hi');
     })
 })
 
