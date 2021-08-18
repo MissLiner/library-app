@@ -38,12 +38,12 @@ for (i = myLibrary.length-1; i >= 0; i--) {
     removeBtn.className = 'remove-btn';
     removeBtn.textContent = 'Remove';
     document.getElementById(`${i}`).appendChild(removeBtn);
-    removeBtn.id = `remove${i}`;
+    removeBtn.dataset.bookindex = `${i}`;
 }
 
 document.querySelectorAll('#remove-btn').forEach(button => {
     removeBtn.addEventListener('click', () => {
-        myLibrary = myLibrary.splice(`${this.id}`, 1);
+        myLibrary.splice(button.dataset.bookindex, 1);
     })
 })
 
