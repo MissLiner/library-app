@@ -30,17 +30,36 @@ clearShelf = () => {
     }
 }
 
+
+//if (myLibrary.length > 0)
+addRemoveBtn = (parent) => {
+    let removeBtn = document.createElement('button');
+    removeBtn.className = 'remove-btn';
+    removeBtn.textContent = 'Remove';
+    parent.appendChild(removeBtn);
+}
+//     for (i = myLibrary.length-1; i >= 0; i--) {
+//         let removeBtn = document.createElement('button');
+//         removeBtn.className = 'remove-btn';
+//         removeBtn.textContent = 'Remove';
+//         document.getElementById(`${i}`).appendChild(removeBtn);
+//         removeBtn.dataset.bookindex = `${i}`;
+// }
+// }
+
 shelveBooks = () => {
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
         shelfBook.className = 'shelved-books';
         shelfBook.id = `${myLibrary.indexOf(item)}`;
         shelfBook.textContent = item.describeBook();
+        addRemoveBtn(shelfBook);
         libraryShelf.appendChild(shelfBook);
 })
 }
 
 shelveBooks(myLibrary);
+
 
 const newBookBtn = document.getElementById('new-book-btn');
 const newBookForm = document.getElementById('new-book-form');
@@ -68,15 +87,7 @@ submitBtn.addEventListener('click', () => {
     newBookForm.classList.add('hidden');
 })
 
-if (myLibrary.length > 0) {
-    for (i = myLibrary.length-1; i >= 0; i--) {
-        let removeBtn = document.createElement('button');
-        removeBtn.className = 'remove-btn';
-        removeBtn.textContent = 'Remove';
-        document.getElementById(`${i}`).appendChild(removeBtn);
-        removeBtn.dataset.bookindex = `${i}`;
-}
-}
+
 
 document.querySelectorAll('.remove-btn').forEach(button => {
     button.addEventListener('click', function removeBook() {
