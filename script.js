@@ -35,11 +35,9 @@ addStatusBtn = () => {
     let statusBtn = document.createElement('button');
     statusBtn.className = 'status-btn';
     document.getElementById(`${i}`).appendChild(statusBtn);
+    statusBtn.dataset.bookindex = `${i}`;
     statusBtn.textContent = myLibrary[i].readStatus;
-    statusBtn.addEventListener('click', function toggleStatus() {
-        statusBtn.textContent === 'read' ? statusBtn.textContent = 'not read' : statusBtn.textContent = 'read';
-    })
-    myLibrary[i].readStatus = statusBtn.textContent;
+
     }
 }
 
@@ -50,10 +48,7 @@ addRemoveBtn = () => {
             removeBtn.textContent = 'Remove';
             document.getElementById(`${i}`).appendChild(removeBtn);
             removeBtn.dataset.bookindex = `${i}`;
-            removeBtn.addEventListener('click', function removeBook() {
-                myLibrary.splice(removeBtn.dataset.bookindex, 1);
-                removeBtn.parentNode.remove();
-            })
+            
     }
 }
 
@@ -98,3 +93,17 @@ submitBtn.addEventListener('click', () => {
     newBookForm.classList.add('hidden');
     submitBtn.classList.add('hidden');
 })
+
+document.addEventListener('click', function(event) {
+    if (event.target.matches('.remove-btn')) {
+        myLibrary.splice(event.target.dataset.bookindex, 1);
+        event.target.parentNode.remove();
+    }
+    if (event.target.matches('.status-btn')) {
+        myLibrary[event.target.dataset.bookindex].readStatus === 'read' ? 
+        myLibrary[event.target.dataset.bookindex].readStatus = 'not read' :
+        myLibrary[event.target.dataset.bookindex].readStatus = 'read';
+        event.target.textContent = myLibrary[event.target.dataset.bookindex].readStatus;
+    }
+},
+false);
