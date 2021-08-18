@@ -52,10 +52,12 @@ shelveBooks = () => {
         shelfBook.textContent = item.describeBook();
         libraryShelf.appendChild(shelfBook);
 })
+addRemoveBtn();
 }
 
 shelveBooks(myLibrary);
 console.log(myLibrary);
+
 
 const newBookBtn = document.getElementById('new-book-btn');
 const newBookForm = document.getElementById('new-book-form');
