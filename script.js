@@ -70,13 +70,7 @@ const newBookBtn = document.getElementById('new-book-btn');
 const newBookForm = document.getElementById('new-book-form');
 const submitBtn = document.getElementById('submit-btn');
 
-newBookBtn.addEventListener('click', () => {
-    newBookForm.classList.remove('hidden');
-    submitBtn.classList.remove('hidden');
-    newBookBtn.classList.add('hidden');
-})
-
-submitBtn.addEventListener('click', () => {
+submitNewBook = () => {
     let newTitle = document.getElementById('title-input').value;
     let newAuthor = document.getElementById('author-input').value;
     let newLength = document.getElementById('length-input').value;
@@ -86,13 +80,7 @@ submitBtn.addEventListener('click', () => {
     clearShelf();
     shelveBooks(myLibrary);
     console.log(myLibrary);
-})
-
-submitBtn.addEventListener('click', () => {
-    newBookBtn.classList.remove('hidden');
-    newBookForm.classList.add('hidden');
-    submitBtn.classList.add('hidden');
-})
+}
 
 document.addEventListener('click', function(event) {
     if (event.target.matches('.remove-btn')) {
@@ -104,6 +92,17 @@ document.addEventListener('click', function(event) {
         myLibrary[event.target.dataset.bookindex].readStatus = 'not read' :
         myLibrary[event.target.dataset.bookindex].readStatus = 'read';
         event.target.textContent = myLibrary[event.target.dataset.bookindex].readStatus;
+    }
+    if (event.target.matches('#new-book-btn')) {
+        newBookForm.classList.remove('hidden');
+        submitBtn.classList.remove('hidden');
+        newBookBtn.classList.add('hidden');
+    }
+    if (event.target.matches('#submit-btn')) {
+        submitNewBook();
+        newBookBtn.classList.remove('hidden');
+        newBookForm.classList.add('hidden');
+        submitBtn.classList.add('hidden');
     }
 },
 false);
