@@ -27,11 +27,25 @@ const libraryShelf = document.getElementById('library-shelf');
 
 myLibrary.forEach(item => {
     let shelfBook = document.createElement('div');
-    shelfBook.className = 'shelvedBooks';
-    shelfBook.id = `book${myLibrary.indexOf(item)}`;
+    shelfBook.className = 'shelved-books';
+    shelfBook.id = `${myLibrary.indexOf(item)}`;
     shelfBook.textContent = item.describeBook();
     libraryShelf.appendChild(shelfBook);
 });
+
+for (i = myLibrary.length-1; i >= 0; i--) {
+    let removeBtn = document.createElement('button');
+    removeBtn.className = 'remove-btn';
+    removeBtn.textContent = 'Remove';
+    document.getElementById(`${i}`).appendChild(removeBtn);
+    removeBtn.id = `remove${i}`;
+}
+
+document.querySelectorAll('#remove-btn').forEach(button => {
+    removeBtn.addEventListener('click', () => {
+        myLibrary = myLibrary.splice(`${this.id}`, 1);
+    })
+})
 
 const newBookBtn = document.getElementById('new-book-btn');
 const newBookForm = document.getElementById('new-book-form');
