@@ -57,9 +57,9 @@ shelveBooks = () => {
         shelfBook.className = 'shelved-books';
         shelfBook.id = myLibrary.indexOf(item);
         shelfBook.textContent = item.describeBook();
-        addRemoveBtn();
         libraryShelf.appendChild(shelfBook);
 })
+addRemoveBtn();
 }
 
 shelveBooks(myLibrary);
