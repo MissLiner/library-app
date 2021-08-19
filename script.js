@@ -16,10 +16,12 @@ addBookToLibrary = (book) => myLibrary.push(book);
 const book1 = new Book('A Little Princess', 'Frances Hodgson Burnett', '160', 'Read: Yes');
 const book2 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'Read: Yes');
 const book3 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'Read: No');
+const book4 = new Book('Sparky', 'Annabelle Stephenson', '3', 'Read: Y')
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);
 addBookToLibrary(book3);
+addBookToLibrary(book4);
 
 const libraryShelf = document.getElementById('library-shelf');
 let shelvedBooks = document.querySelectorAll('.shelved-books');
