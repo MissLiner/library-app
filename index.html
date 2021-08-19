@@ -10,9 +10,11 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+    <header>My Library</header>
+    <div id="library-shelf"></div>
     <button id="new-book-btn" class="main-btn">ADD NEW BOOK</button>
     <form id="new-book-form" class="hidden">
-        <h2>Which book would you like to add?</h2>
+        <h1>Which book would you like to add?</h1>
         <label>Book Title: <input type="text" id="title-input"></label>
         <label>Book Author: <input type="text" id="author-input"></label>
         <label>Book Length: <input type="text" id="length-input"></label>
@@ -21,7 +23,6 @@
                 <option value="read">I have!</option>
                 <option value="not-read">Not yet . . .</option>
             </select>
-        
     </form>  
     <button id="submit-btn" class="hidden main-btn">SUBMIT</button>
-    <div id="library-shelf"></div>
+    

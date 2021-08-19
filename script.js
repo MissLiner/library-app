@@ -8,7 +8,7 @@ function Book(title, author, pages, readStatus) {
   }
 
   Book.prototype.describeBook = function(book) {
-    return this.title + ' by ' + this.author + ', ' + this.length + ' pages.';
+   return this.title + '\n by \n' + this.author + ' ' + this.length + 'pp';
   }
 
 addBookToLibrary = (book) => myLibrary.push(book);
@@ -51,7 +51,7 @@ addRemoveBtn = () => {
             
     }
 }
-const bookColors = ['#F34B28', '#C4CCFF', '#F1F238', '#25A39A', '#C49939']
+const bookColors = ['#45003D', '#0D0058', '#105401', '#42290C']
 
 shelveBooks = () => {
     myLibrary.forEach(item => {
@@ -59,6 +59,22 @@ shelveBooks = () => {
         shelfBook.className = 'shelved-books';
         shelfBook.style.backgroundColor = bookColors[myLibrary.indexOf(item)];
         shelfBook.id = myLibrary.indexOf(item);
+        
+        let shelfTitle = document.createElement('h2');
+        shelfTitle.className = 'gold-text';
+        shelfBook.appendChild(shelfTitle);
+        shelfTitle.textContent = item.title;
+        
+        let shelfAuthor = document.createElement('h3');
+        shelfAuthor.className = 'gold-text';
+        shelfBook.appendChild(shelfAuthor);
+        shelfAuthor.textContent = item.author;
+
+        let shelfLength = document.createElement('h4');
+        shelfLength.className = 'gold-text';
+        shelfBook.appendChild(shelfLength);
+        shelfLength.textContent = item.length + 'pp';
+        
         // for (const key in item) {
         //     let bookInfo = document.createElement('div');
         //     bookInfo.className = `${key} book-spine`;
@@ -66,7 +82,7 @@ shelveBooks = () => {
         //     bookInfo.textContent = key;
         //     shelfBook.appendChild(bookInfo)
         // }
-        shelfBook.textContent = item.describeBook();
+        //shelfBook.textContent = item.describeBook();
         libraryShelf.appendChild(shelfBook);
     })
     addStatusBtn();

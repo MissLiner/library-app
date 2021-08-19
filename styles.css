@@ -3,6 +3,15 @@
     
 }
 
+header {
+    margin: auto;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
 .hidden {
     display: none !important;
 }
@@ -53,7 +62,7 @@ select {
     grid-template-rows: auto;
     padding-left: 20px;
     padding-right: 20px;
-    height: 400px;
+    height: 420px;
     margin: 40px;
     background-color: darkgoldenrod;
 
@@ -61,24 +70,39 @@ select {
 
 .shelved-books {
    border: solid;
-    grid-template-rows: 9fr 1fr 1fr;
+    grid-template-rows: 5fr 1fr 1fr;
     display: grid;
-    background-color:oldlace;
-    color:black;
-    font-family: Allura;
-    font-size: larger;
-    font-weight: bold;
-    height: 350px;
-    padding: 10px;
+    height: 400px;
+    padding: 0px;
     text-align: center;
     width: auto;
-    
 }
 
-/* .book-spine {
-    font-family: Allura;
-    font-size: larger;
-} */
+.gold-text {
+    color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url(Gold\ Leaf\ Background.jpeg.crdownload) repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+h2 {
+    font-family: allura;
+    font-size: 40px;
+}
+
+h3 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight:900;
+}
+
+h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: small;
+}
 
 .book-btn {
     
