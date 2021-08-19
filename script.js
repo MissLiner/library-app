@@ -108,6 +108,8 @@ submitNewBook = () => {
     console.log(myLibrary);
 }
 
+let quietSign = document.getElementById('quiet-sign');
+
 document.addEventListener('click', function(event) {
     if (event.target.matches('.remove-btn')) {
         myLibrary.splice(event.target.dataset.bookindex, 1);
@@ -124,6 +126,8 @@ document.addEventListener('click', function(event) {
         submitBtn.classList.remove('hidden');
         newBookBtn.classList.add('hidden');
         libraryShelf.classList.add('hidden');
+        quietSign.classList.add('hidden');
+
     }
     if (event.target.matches('#submit-btn')) {
         submitNewBook();
@@ -131,6 +135,7 @@ document.addEventListener('click', function(event) {
         newBookForm.classList.add('hidden');
         submitBtn.classList.add('hidden');
         libraryShelf.classList.remove('hidden');
+        quietSign.classList.remove('hidden');
     }
 },
 false);
