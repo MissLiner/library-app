@@ -123,12 +123,14 @@ document.addEventListener('click', function(event) {
         newBookForm.classList.remove('hidden');
         submitBtn.classList.remove('hidden');
         newBookBtn.classList.add('hidden');
+        libraryShelf.classList.add('hidden');
     }
     if (event.target.matches('#submit-btn')) {
         submitNewBook();
         newBookBtn.classList.remove('hidden');
         newBookForm.classList.add('hidden');
         submitBtn.classList.add('hidden');
+        libraryShelf.classList.remove('hidden');
     }
 },
 false);
