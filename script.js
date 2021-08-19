@@ -75,15 +75,6 @@ shelveBooks = () => {
         shelfLength.className = 'gold-text';
         shelfBook.appendChild(shelfLength);
         shelfLength.textContent = item.length + 'pp';
-        
-        // for (const key in item) {
-        //     let bookInfo = document.createElement('div');
-        //     bookInfo.className = `${key} book-spine`;
-        //     bookInfo.style.backgroundColor = 'none';
-        //     bookInfo.textContent = key;
-        //     shelfBook.appendChild(bookInfo)
-        // }
-        //shelfBook.textContent = item.describeBook();
         libraryShelf.appendChild(shelfBook);
     })
     addStatusBtn();

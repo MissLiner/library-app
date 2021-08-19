@@ -36,7 +36,7 @@ h1 {
     line-height: 60px;
     transform: scale(.7);
     width: 350px;
-    margin-top:8px;
+    margin-top:0;
 }
 
 .hidden {
@@ -82,9 +82,8 @@ select {
     display: block;
     margin: 0 auto; 
     background-color: white;
-    font-size: larger;
-    /* margin-top: 30px; */
-    width: 175px;
+    font-size: 40px;
+    width: 400px;
 }
 
 #library-shelf {
@@ -108,6 +107,7 @@ select {
     height: 350px;
     padding: 0px;
     text-align: center;
+    width:100px;
 }
 
 .book-btns {
@@ -120,7 +120,7 @@ select {
     left: 0;
     right: 0;
     text-align: center;
-        font-family: 'Cabin Sketch', cursive;
+    font-family: 'Cabin Sketch', cursive;
     /* font-family: 'Fredericka the Great', cursive; */
     /* font-family: 'Miltonian', cursive; */
     /* font-family: 'Rye', cursive;  */
@@ -135,7 +135,7 @@ select {
     bottom: 10px;
 
 }
-
+/* 
 .widest {
     width: 150px !important;
 }
@@ -146,7 +146,7 @@ select {
 
 .wide {
     width: 110px !important;
-}
+} */
 
 .gold-text {
     /* https://www.theblogmarket.co/create-gold-foil-text-with-css/ */
@@ -174,8 +174,8 @@ h3 {
 }
 
 h4 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
     position:absolute;
     text-align: center;
     bottom:100px;
