@@ -65,8 +65,8 @@ select {
     display: grid;
     background-color:oldlace;
     color:black;
-    font-family: didot;
-    font-size: 18px;
+    font-family: Allura;
+    font-size: larger;
     font-weight: bold;
     height: 350px;
     padding: 10px;
@@ -75,13 +75,15 @@ select {
     
 }
 
-.book-spine {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-}
+/* .book-spine {
+    font-family: Allura;
+    font-size: larger;
+} */
 
 .book-btn {
     
     font-size: 16px;
+    height: 40px;
     text-align: center;
 
     width: 100%;

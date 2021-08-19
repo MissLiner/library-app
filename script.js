@@ -7,9 +7,9 @@ function Book(title, author, pages, readStatus) {
     this.readStatus = readStatus
   }
 
-//   Book.prototype.describeBook = function(book) {
-//     return this.title + ' by ' + this.author + ', ' + this.length + ' pages.';
-//   }
+  Book.prototype.describeBook = function(book) {
+    return this.title + ' by ' + this.author + ', ' + this.length + ' pages.';
+  }
 
 addBookToLibrary = (book) => myLibrary.push(book);
 
@@ -33,7 +33,7 @@ clearShelf = () => {
 addStatusBtn = () => {
     for (i = myLibrary.length-1; i >= 0; i--) {
     let statusBtn = document.createElement('button');
-    statusBtn.className = 'book-btn';
+    statusBtn.className = 'status-btn';
     document.getElementById(`${i}`).appendChild(statusBtn);
     statusBtn.dataset.bookindex = `${i}`;
     statusBtn.textContent = myLibrary[i].readStatus;
@@ -44,7 +44,7 @@ addStatusBtn = () => {
 addRemoveBtn = () => {
      for (i = myLibrary.length-1; i >= 0; i--) {
             let removeBtn = document.createElement('button');
-            removeBtn.className = 'book-btn';
+            removeBtn.className = 'remove-btn';
             removeBtn.textContent = 'Remove';
             document.getElementById(`${i}`).appendChild(removeBtn);
             removeBtn.dataset.bookindex = `${i}`;
@@ -57,16 +57,16 @@ shelveBooks = () => {
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
         shelfBook.className = 'shelved-books';
-        shelfBook.style.backgroundColor = bookColors[Math.floor(Math.random() * bookColors.length)];
+        shelfBook.style.backgroundColor = bookColors[myLibrary.indexOf(item)];
         shelfBook.id = myLibrary.indexOf(item);
-        for (const key in item) {
-            let bookInfo = document.createElement('div');
-            bookInfo.className = `${key} book-spine`;
-            bookInfo.style.backgroundColor = 'none';
-            bookInfo.textContent = key;
-            shelfBook.appendChild(bookInfo)
-        }
-        //shelfBook.textContent = item.describeBook();
+        // for (const key in item) {
+        //     let bookInfo = document.createElement('div');
+        //     bookInfo.className = `${key} book-spine`;
+        //     bookInfo.style.backgroundColor = 'none';
+        //     bookInfo.textContent = key;
+        //     shelfBook.appendChild(bookInfo)
+        // }
+        shelfBook.textContent = item.describeBook();
         libraryShelf.appendChild(shelfBook);
     })
     addStatusBtn();
