@@ -7,9 +7,9 @@ function Book(title, author, pages, readStatus) {
     this.readStatus = readStatus
   }
 
-  Book.prototype.describeBook = function(book) {
-    return this.title + ' by ' + this.author + ', ' + this.length + ' pages.';
-  }
+//   Book.prototype.describeBook = function(book) {
+//     return this.title + ' by ' + this.author + ', ' + this.length + ' pages.';
+//   }
 
 addBookToLibrary = (book) => myLibrary.push(book);
 
@@ -51,13 +51,22 @@ addRemoveBtn = () => {
             
     }
 }
+const bookColors = ['#F34B28', '#C4CCFF', '#F1F238', '#25A39A', '#C49939']
 
 shelveBooks = () => {
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
         shelfBook.className = 'shelved-books';
+        shelfBook.style.backgroundColor = bookColors[Math.floor(Math.random() * bookColors.length)];
         shelfBook.id = myLibrary.indexOf(item);
-        shelfBook.textContent = item.describeBook();
+        for (const key in item) {
+            let bookInfo = document.createElement('div');
+            bookInfo.className = `${key} book-spine`;
+            bookInfo.style.backgroundColor = 'none';
+            bookInfo.textContent = key;
+            shelfBook.appendChild(bookInfo)
+        }
+        //shelfBook.textContent = item.describeBook();
         libraryShelf.appendChild(shelfBook);
     })
     addStatusBtn();
