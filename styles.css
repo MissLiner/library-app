@@ -4,17 +4,23 @@
 }
 
 header {
-    margin: auto;
+    font-family: 'Vast Shadow', cursive;
+    font-size: 50px;
+    text-align: center;
 }
 
 h1 {
+    font-family: 'Cinzel Decorative', cursive;
     font-size: 25px;
     font-weight: normal;
+    text-align: center;
 }
 
 .hidden {
     display: none !important;
 }
+
+
 
 #new-book-form {
     width: 60%;
@@ -55,11 +61,10 @@ select {
 }
 
 #library-shelf {
-    align-items: start;
     border-radius: 4px;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto; */
     padding-left: 20px;
     padding-right: 20px;
     height: 420px;
@@ -69,16 +74,52 @@ select {
 }
 
 .shelved-books {
+   position: relative;
    border: solid;
-    grid-template-rows: 5fr 1fr 1fr;
-    display: grid;
+    display:inline-block;
+    vertical-align: bottom;
     height: 400px;
     padding: 0px;
     text-align: center;
-    width: auto;
+}
+
+.book-btns {
+    background-image: url(Golden-Name-Plate-PNG-Image.png);
+    background-color: #cccccc;
+    font-family: 'Vast Shadow', cursive;
+    width: 90px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.status-btn {
+   position: absolute;
+   bottom: 55px;
+}
+.remove-btn {
+    position: absolute;
+    bottom: 5px;
+
+}
+
+.widest {
+    width: 150px !important;
+}
+
+.wider {
+    width: 130px !important;
+}
+
+.wide {
+    width: 110px !important;
 }
 
 .gold-text {
+    /* https://www.theblogmarket.co/create-gold-foil-text-with-css/ */
     color:#c3a343;
     -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent),
@@ -89,14 +130,15 @@ select {
 }
 
 h2 {
-    font-family: allura;
-    font-size: 40px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 32px;
 }
 
 h3 {
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight:900;
+    vertical-align: top;
 }
 
 h4 {
@@ -109,10 +151,8 @@ h4 {
     font-size: 16px;
     height: 40px;
     text-align: center;
-
     width: 100%;
     border-radius: 6px;
     justify-self: end;
- 
-    background-color: saddlebrown;
+    background-color:gold;
 }

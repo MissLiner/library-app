@@ -33,7 +33,7 @@ clearShelf = () => {
 addStatusBtn = () => {
     for (i = myLibrary.length-1; i >= 0; i--) {
     let statusBtn = document.createElement('button');
-    statusBtn.className = 'status-btn';
+    statusBtn.className = 'status-btn book-btns';
     document.getElementById(`${i}`).appendChild(statusBtn);
     statusBtn.dataset.bookindex = `${i}`;
     statusBtn.textContent = myLibrary[i].readStatus;
@@ -44,7 +44,7 @@ addStatusBtn = () => {
 addRemoveBtn = () => {
      for (i = myLibrary.length-1; i >= 0; i--) {
             let removeBtn = document.createElement('button');
-            removeBtn.className = 'remove-btn';
+            removeBtn.className = 'remove-btn book-btns';
             removeBtn.textContent = 'Remove';
             document.getElementById(`${i}`).appendChild(removeBtn);
             removeBtn.dataset.bookindex = `${i}`;
@@ -52,11 +52,12 @@ addRemoveBtn = () => {
     }
 }
 const bookColors = ['#45003D', '#0D0058', '#105401', '#42290C']
+const bookWidths = ['wide', 'wider', 'widest']
 
 shelveBooks = () => {
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
-        shelfBook.className = 'shelved-books';
+        shelfBook.className = `shelved-books ${bookWidths[Math.floor(Math.random()*bookWidths.length)]}`;
         shelfBook.style.backgroundColor = bookColors[myLibrary.indexOf(item)];
         shelfBook.id = myLibrary.indexOf(item);
         
