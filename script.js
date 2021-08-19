@@ -13,9 +13,9 @@ function Book(title, author, pages, readStatus) {
 
 addBookToLibrary = (book) => myLibrary.push(book);
 
-const book1 = new Book('A Little Princess', 'Frances Hodgson Burnett', '160', 'read');
-const book2 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'read');
-const book3 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'not read');
+const book1 = new Book('A Little Princess', 'Frances Hodgson Burnett', '160', 'Read: Yes');
+const book2 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'Read: Yes');
+const book3 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'Read: No');
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);
@@ -58,7 +58,7 @@ shelveBooks = () => {
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
         shelfBook.className = `shelved-books ${bookWidths[Math.floor(Math.random()*bookWidths.length)]}`;
-        shelfBook.style.backgroundColor = bookColors[myLibrary.indexOf(item)];
+        shelfBook.style.backgroundColor = bookColors[Math.floor(Math.random()*bookColors.length)];
         shelfBook.id = myLibrary.indexOf(item);
         
         let shelfTitle = document.createElement('h2');
@@ -116,9 +116,9 @@ document.addEventListener('click', function(event) {
         event.target.parentNode.remove();
     }
     if (event.target.matches('.status-btn')) {
-        myLibrary[event.target.dataset.bookindex].readStatus === 'read' ? 
-        myLibrary[event.target.dataset.bookindex].readStatus = 'not read' :
-        myLibrary[event.target.dataset.bookindex].readStatus = 'read';
+        myLibrary[event.target.dataset.bookindex].readStatus === 'Read: Yes' ? 
+        myLibrary[event.target.dataset.bookindex].readStatus = 'Read: No' :
+        myLibrary[event.target.dataset.bookindex].readStatus = 'Read: Yes';
         event.target.textContent = myLibrary[event.target.dataset.bookindex].readStatus;
     }
     if (event.target.matches('#new-book-btn')) {
