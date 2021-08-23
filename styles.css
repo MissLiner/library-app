@@ -6,7 +6,7 @@
 }
 
 * {
-    background-color:paleturquoise;
+    background-color:rgb(191, 235, 235);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -26,7 +26,7 @@ h1 {
 }
 
 .sign {
-    background-color: white;
+    background-color:#cc8800;
     background-image: url(white-sign-background.svg);
     border: solid;
     border-style: outset;
@@ -85,15 +85,13 @@ select {
 }
 
 #new-book-btn {
-    background-color:rgb(11, 18, 117);
+    background-color:rgb(11, 18, 117) !important;
     border-radius: 6px;
-    /* display: block; */
     color:rgb(250, 206, 64);
     font-size: 28px;
     font-family: 'mailart_rubberstampregular';
-    /* margin: 0 auto; */
     width: auto;
-    height: 375px;
+    height: 400px;
     margin-right:10px;
 }
 
@@ -112,6 +110,7 @@ select {
 
 .shelved-books {
     border: solid;
+    bottom:22px;
     display:inline-block;
     height: 350px;
     padding: 0px;
@@ -167,6 +166,7 @@ h3 {
     position:absolute;
     top:100px;
     vertical-align:top;
+    width:100px;
 }
 
 h4 {
@@ -175,6 +175,5 @@ h4 {
     font-size: 18px;
     left: 50%;
     position:absolute;
-    text-align: center;
     transform: translate(-50%, 0);
 }

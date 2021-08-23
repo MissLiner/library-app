@@ -3,11 +3,12 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 350 60" style="enable-background:new 0 0 350 60;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st0{fill:#FFF7EB;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
 </style>
 <rect x="7.52" y="7.1" class="st0" width="335.14" height="45.98"/>
-<ellipse class="st0" cx="13.56" cy="14.55" rx="2.07" ry="2.76"/>
-<ellipse class="st0" cx="13.56" cy="45.82" rx="2.07" ry="2.76"/>
-<ellipse class="st0" cx="335.85" cy="14.55" rx="2.07" ry="2.76"/>
-<ellipse class="st0" cx="335.85" cy="45.82" rx="2.07" ry="2.76"/>
+<ellipse class="st1" cx="13.56" cy="14.55" rx="2.07" ry="2.76"/>
+<ellipse class="st1" cx="13.56" cy="45.82" rx="2.07" ry="2.76"/>
+<ellipse class="st1" cx="335.85" cy="14.55" rx="2.07" ry="2.76"/>
+<ellipse class="st1" cx="335.85" cy="45.82" rx="2.07" ry="2.76"/>
 </svg>
