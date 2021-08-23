@@ -18,6 +18,7 @@ header {
 }
 
 h1 {
+    background-color: #FFF7EC;
     font-family: 'Cinzel Decorative', cursive;
     font-size: 26px;
     font-weight: normal;
@@ -41,17 +42,20 @@ h1 {
     display: none !important;
 }
 
-#form-header {
-    margin-top: 30px;
-}
-
 #new-book-form {
+    background-color: #FFF7EC;
+    border: solid;
+    border-color:#FFF7EC;
+    border-width: 1px 60px 210px 50px;
+    height:300px;
     margin: auto;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    outline:solid;
     width: 60%;
 }
 
 label {
+    background-color: #FFF7EC;
     font-size: large;
 }
 
@@ -60,8 +64,10 @@ input {
     border-radius: 6px;
     font-family: sans-serif;
     font-size: 16px;
+    width: 60%;
     height: 30px;
     margin: 10px;
+    margin-bottom: 20px;
     width: 100%;
 }
 
@@ -76,11 +82,11 @@ select {
 }
 
 #close-btn {
+    background-color: #FFF7EC;
     border: none;
     font-size: 25px;
-    left:100px;
-    position:absolute;
-    top: 110px;
+    margin-left:-40px;
+    margin-top:10px;
 }
 
 #submit-btn {
@@ -88,8 +94,8 @@ select {
     border-radius: 6px;
     display: block;
     font-size: 40px;
-    margin: 0 auto;
-    width: 400px;
+    margin: 20px auto;
+    width: auto;
 }
 
 #new-book-btn {
