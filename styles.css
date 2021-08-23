@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'mailart_rubberstampregular';
-    src: url('MailartRubberstamp-Regular.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
+    src: url('MailartRubberstamp-Regular.woff') format('woff');
 }
 
 * {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color:paleturquoise;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header {
@@ -18,7 +18,6 @@ header {
 }
 
 h1 {
-
     font-family: 'Cinzel Decorative', cursive;
     font-size: 26px;
     font-weight: normal;
@@ -33,9 +32,9 @@ h1 {
     border-style: outset;
     height: 60px;
     line-height: 60px;
+    margin-top:0;
     transform: scale(.7);
     width: 350px;
-    margin-top:0;
 }
 
 .hidden {
@@ -47,9 +46,9 @@ h1 {
 }
 
 #new-book-form {
-    width: 60%;
     margin: auto;
     margin-bottom: 30px;
+    width: 60%;
 }
 
 label {
@@ -57,18 +56,18 @@ label {
 }
 
 input {
-    width: 100%;
     background-color: white;
     border-radius: 6px;
     font-family: sans-serif;
     font-size: 16px;
     height: 30px;
     margin: 10px;
+    width: 100%;
 }
 
 select {
-    font-size: larger;
     background-color: white;
+    font-size: larger;
     margin-left: 20px;
 }
 
@@ -77,70 +76,70 @@ select {
 }
 
 .main-btn {
+    background-color: white;
     border-radius: 6px;
     display: block;
-    margin: 0 auto; 
-    background-color: white;
     font-size: 40px;
+    margin: 0 auto;
     width: 400px;
 }
 
 #library-shelf {
-    border-radius: 4px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 375px;
-    margin-top:20px;
-    margin-left: 5%;
-    margin-bottom: 20px;
     background-color: #cc8800;
     background-image: url(http://www.transparenttextures.com/patterns/wood-pattern.png);
+    border-radius: 4px;
+    height: 375px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-top:20px;
+    padding-left: 20px;
+    padding-right: 20px;
     width:80%;
 }
 
 .shelved-books {
-   position: relative;
-   border: solid;
+    border: solid;
     display:inline-block;
-    vertical-align: bottom;
     height: 350px;
     padding: 0px;
+    position: relative;
     text-align: center;
+    vertical-align: bottom;
     width:100px;
 }
 
 .book-btns {
-    background-image: url(gold-book-plate.svg);
     background-color: #cccccc;
-    width: 85px;
+    background-image: url(gold-book-plate.svg);
+    font-family: 'Cabin Sketch', cursive;
     height: 35px;
+    left: 0;    
     margin-left: auto;
     margin-right: auto;
-    left: 0;
     right: 0;
     text-align: center;
-    font-family: 'Cabin Sketch', cursive;
+    width: 85px;
 }
 
 .status-btn {
-   position: absolute;
-   bottom: 56px;
-}
-.remove-btn {
+    bottom: 56px;
     position: absolute;
-    bottom: 10px;
+}
 
+.remove-btn {
+    bottom: 10px;
+    position: absolute;
 }
 
 .gold-text {
     /* https://www.theblogmarket.co/create-gold-foil-text-with-css/ */
-    color:#c3a343;
-    -webkit-text-fill-color: transparent;
     background: -webkit-linear-gradient(transparent, transparent),
     url(Gold\ Leaf\ Background.jpeg.crdownload) repeat;
     background: -o-linear-gradient(transparent, transparent);
-    -webkit-background-clip: text;
     background-clip: text;
+    color:#c3a343;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h2 {
@@ -158,11 +157,11 @@ h3 {
 }
 
 h4 {
+    bottom:100px;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 18px;
+    left: 50%;
     position:absolute;
     text-align: center;
-    bottom:100px;
-    left: 50%;
     transform: translate(-50%, 0);
 }
