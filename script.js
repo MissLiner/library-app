@@ -16,7 +16,7 @@ addBookToLibrary = (book) => myLibrary.push(book);
 const book1 = new Book('A Little Princess', 'Frances Hodgson Burnett', '160', 'Read: Yes');
 const book2 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'Read: Yes');
 const book3 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'Read: No');
-const book4 = new Book('Sparky', 'Annabelle Stephenson', '3', 'Read: Y')
+const book4 = new Book('Sparky', 'Annabelle Stephenson', '3', 'Read: Yes')
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);
@@ -31,6 +31,7 @@ clearShelf = () => {
         libraryShelf.removeChild(libraryShelf.firstChild);
     }
 }
+
 
 addStatusBtn = () => {
     for (i = myLibrary.length-1; i >= 0; i--) {
@@ -90,18 +91,20 @@ const newBookForm = document.getElementById('new-book-form');
 const submitBtn = document.getElementById('submit-btn');
 
 submitNewBook = () => {
-    let newTitle = document.getElementById('title-input').value;
-    let newAuthor = document.getElementById('author-input').value;
-    let newLength = document.getElementById('length-input').value;
-    let newStatus = document.getElementById('read-status').value;
     let newBook = new Book(newTitle, newAuthor, newLength, newStatus);
     addBookToLibrary(newBook);
     clearShelf();
     shelveBooks(myLibrary);
-    console.log(myLibrary);
 }
 
 let quietSign = document.getElementById('quiet-sign');
+
+clearFields = () => {
+    let fields = document.querySelectorAll('input');
+    fields.forEach(input => {
+        input.textContent = '';
+    })
+}
 
 document.addEventListener('click', function(event) {
     if (event.target.matches('.remove-btn')) {
@@ -123,12 +126,22 @@ document.addEventListener('click', function(event) {
 
     }
     if (event.target.matches('#submit-btn')) {
+        let newTitle = document.getElementById('title-input').value;
+        let newAuthor = document.getElementById('author-input').value;
+        let newLength = document.getElementById('length-input').value;
+        let newStatus = document.getElementById('read-status').value;
+        if (newTitle && newAuthor && newLength) {
         submitNewBook();
+        document.getElementById('new-book-form').reset();
         newBookBtn.classList.remove('hidden');
         newBookForm.classList.add('hidden');
         submitBtn.classList.add('hidden');
         libraryShelf.classList.remove('hidden');
         quietSign.classList.remove('hidden');
+        }
+        else {
+            alert("Please complete all fields");
+        }
     }
 },
 false);
