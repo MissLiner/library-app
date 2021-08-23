@@ -2,7 +2,7 @@
     font-family: 'mailart_rubberstampregular';
     font-style: normal;
     font-weight: normal;
-    src: url('MailartRubberstamp-Regular.woff') format('woff');
+    src: url('files/MailartRubberstamp-Regular.woff') format('woff');
 }
 
 * {
@@ -28,7 +28,7 @@ h1 {
 
 .sign {
     background-color:#cc8800;
-    background-image: url(white-sign-background.svg);
+    background-image: url(files/white-sign-background.svg);
     border: solid;
     border-style: outset;
     height: 60px;
@@ -100,7 +100,7 @@ select {
 
 #new-book-btn {
     background-color:#FFF7EC;
-    background-image: url(white-button-background.svg);
+    background-image: url(files/white-button-background.svg);
     background-size:45px 385px;
     border-color:#cc8800;
     border-radius: 6px;
@@ -144,7 +144,7 @@ select {
 
 .book-btns {
     background-color: #cccccc;
-    background-image: url(gold-book-plate.svg);
+    background-image: url(files/gold-book-plate.svg);
     font-family: 'Cabin Sketch', cursive;
     height: 35px;
     left: 0;    
@@ -168,7 +168,7 @@ select {
 .gold-text {
     /* https://www.theblogmarket.co/create-gold-foil-text-with-css/ */
     background: -webkit-linear-gradient(transparent, transparent),
-    url(Gold\ Leaf\ Background.jpeg.crdownload) repeat;
+    url(files/Gold\ Leaf\ Background.jpeg.crdownload) repeat;
     background: -o-linear-gradient(transparent, transparent);
     background-clip: text;
     color:#c3a343;
