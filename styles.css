@@ -113,6 +113,7 @@ select {
     bottom:22px;
     display:inline-block;
     height: 350px;
+    overflow-wrap: break-word;
     padding: 0px;
     position: relative;
     text-align: center;
@@ -164,13 +165,13 @@ h3 {
     font-size:18px;
     font-weight:900;
     position:absolute;
-    top:100px;
+    top:135px;
     vertical-align:top;
     width:100px;
 }
 
 h4 {
-    bottom:100px;
+    bottom:80px;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 18px;
     left: 50%;

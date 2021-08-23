@@ -133,7 +133,10 @@ document.addEventListener('click', function(event) {
         newAuthor = document.getElementById('author-input').value;
         newLength = document.getElementById('length-input').value;
         newStatus = document.getElementById('read-status').value;
-        if (newTitle && newAuthor && newLength) {
+        if (isNaN(newLength) === true) {
+            alert('Please enter a number for Book Length');
+        }
+        else if (newTitle && newAuthor && newLength) {
         submitNewBook();
         document.getElementById('new-book-form').reset();
         newBookBtn.classList.remove('hidden');
