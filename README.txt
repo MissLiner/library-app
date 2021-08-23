@@ -12,3 +12,7 @@ A simple Javascript app to keep track of the books you've read, or want to read!
 --PURPOSE--
 
 This app was developed to practice object manipulation in the Javascript track of the Odin Project curriculum.
+
+--FUTURE UPDATES--
+
+Local storage will be added to keep track of your books across multiple sessions.
