@@ -4,6 +4,10 @@ let newAuthor;
 let newLength;
 let newStatus;
 
+const newBookBtn = document.getElementById('new-book-btn');
+const newBookForm = document.getElementById('new-book-form');
+const submitBtn = document.getElementById('submit-btn');
+
 
 function Book(title, author, pages, readStatus) {
     this.title = title
@@ -59,6 +63,7 @@ const bookColors = ['#45003D', '#0D0058', '#105401', '#42290C']
 const bookColorOrder = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
 
 shelveBooks = () => {
+    libraryShelf.appendChild(newBookBtn);
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
         shelfBook.className = `shelved-books`;
@@ -87,10 +92,6 @@ shelveBooks = () => {
 }
 
 shelveBooks(myLibrary);
-
-const newBookBtn = document.getElementById('new-book-btn');
-const newBookForm = document.getElementById('new-book-form');
-const submitBtn = document.getElementById('submit-btn');
 
 submitNewBook = () => {
     let newBook = new Book(newTitle, newAuthor, newLength, newStatus);

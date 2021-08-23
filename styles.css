@@ -75,13 +75,23 @@ select {
     font-size: x-large;
 }
 
-.main-btn {
+#submit-btn {
     background-color: white;
     border-radius: 6px;
     display: block;
     font-size: 40px;
     margin: 0 auto;
     width: 400px;
+}
+
+#new-book-btn {
+    background-color: white;
+    border-radius: 6px;
+    /* display: block; */
+    font-size: 25px;
+    /* margin: 0 auto; */
+    width: auto;
+    height: 375px;
 }
 
 #library-shelf {
