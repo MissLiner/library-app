@@ -13,15 +13,13 @@ function Book(title, author, pages, readStatus) {
 
 addBookToLibrary = (book) => myLibrary.push(book);
 
-const book1 = new Book('A Little Princess', 'Frances Hodgson Burnett', '160', 'Read: Yes');
-const book2 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'Read: Yes');
-const book3 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'Read: No');
-const book4 = new Book('Sparky', 'Annabelle Stephenson', '3', 'Read: Yes')
+const book1 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'Read: Yes');
+const book2 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'Read: No');
+const book3 = new Book('Sparky', 'Annabelle Stephenson', '3', 'Read: Yes')
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);
 addBookToLibrary(book3);
-addBookToLibrary(book4);
 
 const libraryShelf = document.getElementById('library-shelf');
 let shelvedBooks = document.querySelectorAll('.shelved-books');
@@ -31,7 +29,6 @@ clearShelf = () => {
         libraryShelf.removeChild(libraryShelf.firstChild);
     }
 }
-
 
 addStatusBtn = () => {
     for (i = myLibrary.length-1; i >= 0; i--) {
@@ -43,7 +40,6 @@ addStatusBtn = () => {
 
     }
 }
-
 addRemoveBtn = () => {
      for (i = myLibrary.length-1; i >= 0; i--) {
             let removeBtn = document.createElement('button');
@@ -54,13 +50,13 @@ addRemoveBtn = () => {
             
     }
 }
+
 const bookColors = ['#45003D', '#0D0058', '#105401', '#42290C']
-const bookWidths = ['wide', 'wider', 'widest']
 
 shelveBooks = () => {
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
-        shelfBook.className = `shelved-books ${bookWidths[Math.floor(Math.random()*bookWidths.length)]}`;
+        shelfBook.className = `shelved-books`;
         shelfBook.style.backgroundColor = bookColors[Math.floor(Math.random()*bookColors.length)];
         shelfBook.id = myLibrary.indexOf(item);
         

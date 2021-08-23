@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'mailart_rubberstampregular';
-    src: url('MailartRubberstamp-Regular-webfont.woff2') format('woff2'),
-         url('MailartRubberstamp-Regular.woff') format('woff');
+    src: url('MailartRubberstamp-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -121,9 +120,6 @@ select {
     right: 0;
     text-align: center;
     font-family: 'Cabin Sketch', cursive;
-    /* font-family: 'Fredericka the Great', cursive; */
-    /* font-family: 'Miltonian', cursive; */
-    /* font-family: 'Rye', cursive;  */
 }
 
 .status-btn {
@@ -135,18 +131,6 @@ select {
     bottom: 10px;
 
 }
-/* 
-.widest {
-    width: 150px !important;
-}
-
-.wider {
-    width: 130px !important;
-}
-
-.wide {
-    width: 110px !important;
-} */
 
 .gold-text {
     /* https://www.theblogmarket.co/create-gold-foil-text-with-css/ */
