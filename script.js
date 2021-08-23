@@ -1,4 +1,8 @@
 let myLibrary = [];
+let newTitle;
+let newAuthor;
+let newLength;
+let newStatus;
 
 function Book(title, author, pages, readStatus) {
     this.title = title
@@ -123,10 +127,10 @@ document.addEventListener('click', function(event) {
 
     }
     if (event.target.matches('#submit-btn')) {
-        let newTitle = document.getElementById('title-input').value;
-        let newAuthor = document.getElementById('author-input').value;
-        let newLength = document.getElementById('length-input').value;
-        let newStatus = document.getElementById('read-status').value;
+        newTitle = document.getElementById('title-input').value;
+        newAuthor = document.getElementById('author-input').value;
+        newLength = document.getElementById('length-input').value;
+        newStatus = document.getElementById('read-status').value;
         if (newTitle && newAuthor && newLength) {
         submitNewBook();
         document.getElementById('new-book-form').reset();
