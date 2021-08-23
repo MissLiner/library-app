@@ -128,6 +128,14 @@ document.addEventListener('click', function(event) {
         quietSign.classList.add('hidden');
 
     }
+    if(event.target.matches('#close-btn')) {
+        document.getElementById('new-book-form').reset();
+        newBookBtn.classList.remove('hidden');
+        newBookForm.classList.add('hidden');
+        submitBtn.classList.add('hidden');
+        libraryShelf.classList.remove('hidden');
+        quietSign.classList.remove('hidden');
+    }
     if (event.target.matches('#submit-btn')) {
         newTitle = document.getElementById('title-input').value;
         newAuthor = document.getElementById('author-input').value;

@@ -75,6 +75,14 @@ select {
     font-size: x-large;
 }
 
+#close-btn {
+    border: none;
+    font-size: 25px;
+    left:100px;
+    position:absolute;
+    top: 110px;
+}
+
 #submit-btn {
     background-color: white;
     border-radius: 6px;
@@ -85,12 +93,16 @@ select {
 }
 
 #new-book-btn {
-    background-color:rgb(11, 18, 117) !important;
+    background-color:#FFF7EC;
+    background-image: url(white-button-background.svg);
+    background-size:45px 385px;
+    border-color:#cc8800;
     border-radius: 6px;
-    color:rgb(250, 206, 64);
+    border-width: 8px;
+    color:black;
     font-size: 28px;
     font-family: 'mailart_rubberstampregular';
-    width: auto;
+    width: 60px;
     height: 400px;
     margin-right:10px;
 }
@@ -103,7 +115,7 @@ select {
     margin-bottom: 20px;
     margin-left: 5%;
     margin-top:20px;
-    padding-left: 20px;
+    padding-left: 10px;
     padding-right: 20px;
     width:80%;
 }
