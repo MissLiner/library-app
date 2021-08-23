@@ -88,7 +88,7 @@ select {
     background-color: #cc8800;
     background-image: url(http://www.transparenttextures.com/patterns/wood-pattern.png);
     border-radius: 4px;
-    height: 375px;
+    height: auto;
     margin-bottom: 20px;
     margin-left: 5%;
     margin-top:20px;

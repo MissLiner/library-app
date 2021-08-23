@@ -4,6 +4,7 @@ let newAuthor;
 let newLength;
 let newStatus;
 
+
 function Book(title, author, pages, readStatus) {
     this.title = title
     this.author = author
@@ -15,7 +16,7 @@ Book.prototype.describeBook = function(book) {
    return this.title + '\n by \n' + this.author + ' ' + this.length + 'pp';
 }
 
-addBookToLibrary = (book) => myLibrary.push(book);
+addBookToLibrary = (book) => myLibrary.unshift(book);
 
 const book1 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'Read: Yes');
 const book2 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'Read: No');
