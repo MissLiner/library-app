@@ -110,9 +110,11 @@ select {
 
 .shelved-books {
     border: solid;
-    bottom:22px;
+    /* bottom:22px; */
     display:inline-block;
     height: 350px;
+    margin-bottom: 22px;
+    margin-top: 22px;
     overflow-wrap: break-word;
     padding: 0px;
     position: relative;
