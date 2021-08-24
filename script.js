@@ -7,7 +7,13 @@ let newStatus;
 const newBookBtn = document.getElementById('new-book-btn');
 const newBookForm = document.getElementById('new-book-form');
 const submitBtn = document.getElementById('submit-btn');
+const quietSign = document.getElementById('quiet-sign');
+const libraryShelf = document.getElementById('library-shelf');
+const shelvedBooks = document.querySelectorAll('.shelved-books');
 
+const book1 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'Read: Yes');
+const book2 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'Read: No');
+const book3 = new Book('Sparky', 'Annabelle Stephenson', '3', 'Read: Yes')
 
 function Book(title, author, pages, readStatus) {
     this.title = title
@@ -16,22 +22,11 @@ function Book(title, author, pages, readStatus) {
     this.readStatus = readStatus
 }
 
-Book.prototype.describeBook = function(book) {
-   return this.title + '\n by \n' + this.author + ' ' + this.length + 'pp';
-}
-
 addBookToLibrary = (book) => myLibrary.unshift(book);
-
-const book1 = new Book('The Secret Garden', 'Frances Hodgson Burnett', '247', 'Read: Yes');
-const book2 = new Book('Many Waters', 'Madeleine L\'Engle', '368', 'Read: No');
-const book3 = new Book('Sparky', 'Annabelle Stephenson', '3', 'Read: Yes')
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);
 addBookToLibrary(book3);
-
-const libraryShelf = document.getElementById('library-shelf');
-let shelvedBooks = document.querySelectorAll('.shelved-books');
 
 clearShelf = () => { 
     while (libraryShelf.firstChild) {
@@ -60,7 +55,7 @@ addRemoveBtn = () => {
 }
 
 const bookColors = ['#45003D', '#0D0058', '#105401', '#42290C']
-const bookColorOrder = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
+const bookColorOrder = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
 
 shelveBooks = () => {
     libraryShelf.appendChild(newBookBtn);
@@ -99,15 +94,6 @@ submitNewBook = () => {
     shelveBooks(myLibrary);
 }
 
-let quietSign = document.getElementById('quiet-sign');
-
-clearFields = () => {
-    let fields = document.querySelectorAll('input');
-    fields.forEach(input => {
-        input.textContent = '';
-    })
-}
-
 document.addEventListener('click', function(event) {
     if (event.target.matches('.remove-btn')) {
         myLibrary.splice(event.target.dataset.bookindex, 1);
@@ -136,6 +122,7 @@ document.addEventListener('click', function(event) {
         newAuthor = document.getElementById('author-input').value;
         newLength = document.getElementById('length-input').value;
         newStatus = document.getElementById('read-status').value;
+        
         if (isNaN(newLength) === true) {
             alert('Please enter a number for Book Length');
         }
