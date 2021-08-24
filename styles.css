@@ -108,9 +108,9 @@ select {
     color:black;
     font-size: 28px;
     font-family: 'mailart_rubberstampregular';
-    width: 60px;
     height: 400px;
     margin-right:10px;
+    width: 60px;
 }
 
 #library-shelf {
@@ -124,12 +124,10 @@ select {
     margin-top:20px;
     padding-left: 10px;
     padding-right: 20px;
-    /* width:90%; */
 }
 
 .shelved-books {
     border: solid;
-    /* bottom:22px; */
     display:inline-block;
     height: 350px;
     margin-bottom: 22px;

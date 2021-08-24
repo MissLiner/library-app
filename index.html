@@ -23,23 +23,21 @@
             <button id="new-book-btn" class="main-btn">A<br>D<br>D<br> <br>N<br>E<br>W<br> <br>B<br>O<br>O<br>K</button>
         </div>
         
-        
         <form id="new-book-form" class="hidden">
             <button id="close-btn">X</button>
             <h1 id="form-header">Which book would you like to add?</h1>
+
             <label>Book Title: <input type="text" id="title-input" maxlength="30"></label>
-            <label>Book Author: <input type="text" id="author-input"></label>
-            <label>Book Length: <input type="text" id="length-input"></label>
+            <label>Book Author: <input type="text" id="author-input" maxlength="40"></label>
+            <label>Book Length: <input type="text" id="length-input" maxlength="5"></label>
             <label id="read-status-label" for="read-status">Have you read this book?</label>
-            <select id="read-status">
-                <option value="Read: Yes">I have!</option>
-                <option value="Read: No">Not yet . . .</option>
-            </select>
+                <select id="read-status">
+                    <option value="Read: Yes">I have!</option>
+                    <option value="Read: No">Not yet . . .</option>
+                </select>
+
             <button type="button" id="submit-btn" class="main-btn">SUBMIT</button>
         </form>
-        
-        
-        
     </body>
 </html>
     
