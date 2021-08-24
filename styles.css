@@ -26,6 +26,30 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: 'mailart_rubberstampregular';
+    font-size: 26px;
+}
+
+h3 {
+    font-family:'mailart_rubberstampregular';
+    font-size:18px;
+    font-weight:900;
+    position:absolute;
+    top:135px;
+    vertical-align:top;
+    width:100px;
+}
+
+h4 {
+    bottom:80px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    left: 50%;
+    position:absolute;
+    transform: translate(-50%, 0);
+}
+
 .sign {
     background-color:#cc8800;
     background-image: url(files/white-sign-background.svg);
@@ -40,62 +64,6 @@ h1 {
 
 .hidden {
     display: none !important;
-}
-
-#new-book-form {
-    background-color: #FFF7EC;
-    border: solid;
-    border-color:#FFF7EC;
-    border-width: 1px 60px 210px 50px;
-    height:300px;
-    margin: auto;
-    margin-top: 20px;
-    outline:solid;
-    width: 60%;
-}
-
-label {
-    background-color: #FFF7EC;
-    font-size: large;
-}
-
-input {
-    background-color: white;
-    border-radius: 6px;
-    font-family: sans-serif;
-    font-size: 16px;
-    width: 60%;
-    height: 30px;
-    margin: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-select {
-    background-color: white;
-    font-size: larger;
-    margin-left: 20px;
-}
-
-#read-status-label {
-    font-size: x-large;
-}
-
-#close-btn {
-    background-color: #FFF7EC;
-    border: none;
-    font-size: 25px;
-    margin-left:-40px;
-    margin-top:10px;
-}
-
-#submit-btn {
-    background-color: white;
-    border-radius: 6px;
-    display: block;
-    font-size: 40px;
-    margin: 40px auto;
-    width: auto;
 }
 
 #new-book-btn {
@@ -140,6 +108,17 @@ select {
     width:100px;
 }
 
+.gold-text {
+    /* https://www.theblogmarket.co/create-gold-foil-text-with-css/ */
+    background: -webkit-linear-gradient(transparent, transparent),
+    url(files/Gold\ Leaf\ Background.jpeg.crdownload) repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    background-clip: text;
+    color:#c3a343;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .book-btns {
     background-color: #cccccc;
     background-image: url(files/gold-book-plate.svg);
@@ -163,37 +142,58 @@ select {
     position: absolute;
 }
 
-.gold-text {
-    /* https://www.theblogmarket.co/create-gold-foil-text-with-css/ */
-    background: -webkit-linear-gradient(transparent, transparent),
-    url(files/Gold\ Leaf\ Background.jpeg.crdownload) repeat;
-    background: -o-linear-gradient(transparent, transparent);
-    background-clip: text;
-    color:#c3a343;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+#new-book-form {
+    background-color: #FFF7EC;
+    border: solid;
+    border-color:#FFF7EC;
+    border-width: 1px 60px 210px 50px;
+    height:300px;
+    margin: auto;
+    margin-top: 20px;
+    outline:solid;
+    width: 60%;
 }
 
-h2 {
-    font-family: 'mailart_rubberstampregular';
-    font-size: 26px;
+#close-btn {
+    background-color: #FFF7EC;
+    border: none;
+    font-size: 25px;
+    margin-left:-40px;
+    margin-top:10px;
 }
 
-h3 {
-    font-family:'mailart_rubberstampregular';
-    font-size:18px;
-    font-weight:900;
-    position:absolute;
-    top:135px;
-    vertical-align:top;
-    width:100px;
+label {
+    background-color: #FFF7EC;
+    font-size: large;
 }
 
-h4 {
-    bottom:80px;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    left: 50%;
-    position:absolute;
-    transform: translate(-50%, 0);
+input {
+    background-color: white;
+    border-radius: 6px;
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 60%;
+    height: 30px;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+select {
+    background-color: white;
+    font-size: larger;
+    margin-left: 20px;
+}
+
+#read-status-label {
+    font-size: x-large;
+}
+
+#submit-btn {
+    background-color: white;
+    border-radius: 6px;
+    display: block;
+    font-size: 30px;
+    margin: 50px auto;
+    width: auto;
 }
