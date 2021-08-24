@@ -121,17 +121,13 @@ document.addEventListener('click', function(event) {
     }
     if (event.target.matches('#new-book-btn')) {
         newBookForm.classList.remove('hidden');
-        submitBtn.classList.remove('hidden');
-        // newBookBtn.classList.add('hidden');
         libraryShelf.classList.add('hidden');
         quietSign.classList.add('hidden');
 
     }
     if(event.target.matches('#close-btn')) {
         document.getElementById('new-book-form').reset();
-        // newBookBtn.classList.remove('hidden');
         newBookForm.classList.add('hidden');
-        submitBtn.classList.add('hidden');
         libraryShelf.classList.remove('hidden');
         quietSign.classList.remove('hidden');
     }
@@ -146,9 +142,7 @@ document.addEventListener('click', function(event) {
         else if (newTitle && newAuthor && newLength) {
         submitNewBook();
         document.getElementById('new-book-form').reset();
-        // newBookBtn.classList.remove('hidden');
         newBookForm.classList.add('hidden');
-        submitBtn.classList.add('hidden');
         libraryShelf.classList.remove('hidden');
         quietSign.classList.remove('hidden');
         }
