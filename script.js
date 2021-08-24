@@ -63,6 +63,7 @@ const bookColors = ['#45003D', '#0D0058', '#105401', '#42290C']
 const bookColorOrder = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
 
 shelveBooks = () => {
+    libraryShelf.appendChild(newBookBtn);
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
         shelfBook.className = `shelved-books`;
@@ -89,7 +90,7 @@ shelveBooks = () => {
     addRemoveBtn();
 }
 
-// shelveBooks(myLibrary);
+shelveBooks(myLibrary);
 
 submitNewBook = () => {
     let newBook = new Book(newTitle, newAuthor, newLength, newStatus);
@@ -121,14 +122,14 @@ document.addEventListener('click', function(event) {
     if (event.target.matches('#new-book-btn')) {
         newBookForm.classList.remove('hidden');
         submitBtn.classList.remove('hidden');
-        newBookBtn.classList.add('hidden');
+        // newBookBtn.classList.add('hidden');
         libraryShelf.classList.add('hidden');
         quietSign.classList.add('hidden');
 
     }
     if(event.target.matches('#close-btn')) {
         document.getElementById('new-book-form').reset();
-        newBookBtn.classList.remove('hidden');
+        // newBookBtn.classList.remove('hidden');
         newBookForm.classList.add('hidden');
         submitBtn.classList.add('hidden');
         libraryShelf.classList.remove('hidden');
@@ -145,7 +146,7 @@ document.addEventListener('click', function(event) {
         else if (newTitle && newAuthor && newLength) {
         submitNewBook();
         document.getElementById('new-book-form').reset();
-        newBookBtn.classList.remove('hidden');
+        // newBookBtn.classList.remove('hidden');
         newBookForm.classList.add('hidden');
         submitBtn.classList.add('hidden');
         libraryShelf.classList.remove('hidden');
