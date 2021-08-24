@@ -63,12 +63,10 @@ const bookColors = ['#45003D', '#0D0058', '#105401', '#42290C']
 const bookColorOrder = [0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3]
 
 shelveBooks = () => {
-    libraryShelf.appendChild(newBookBtn);
     myLibrary.forEach(item => {
         let shelfBook = document.createElement('div');
         shelfBook.className = `shelved-books`;
         shelfBook.style.backgroundColor = bookColors[bookColorOrder[myLibrary.indexOf(item)]];
-        // shelfBook.style.backgroundColor = bookColors[Math.floor(Math.random()*bookColors.length)];
         shelfBook.id = myLibrary.indexOf(item);
         
         let shelfTitle = document.createElement('h2');
@@ -91,7 +89,7 @@ shelveBooks = () => {
     addRemoveBtn();
 }
 
-shelveBooks(myLibrary);
+// shelveBooks(myLibrary);
 
 submitNewBook = () => {
     let newBook = new Book(newTitle, newAuthor, newLength, newStatus);
@@ -157,5 +155,5 @@ document.addEventListener('click', function(event) {
             alert("Please complete all fields");
         }
     }
-},
-false);
+}, false
+);
